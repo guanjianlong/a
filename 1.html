@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="txt" id="txt" value="请输入账号" />
+	</body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+	    var txt=$("#txt").val();
+	    $("#txt").on("focus",function(){
+	    		if($(this).val()==txt){
+				$(this).val("");
+			}
+			
+	    });
+	    $("#txt").on("blur",function(){
+			if($(this).val()==""){
+				$(this).val(txt);
+//				$(this)[0].value=txt;
+			}
+		});
+	</script>
+</html>

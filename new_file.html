@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="p1">姓名：<input type="text"/></p>
+		<p>年龄：<input type="text"/></p>
+		<p>电话：<input type="text"/></p>
+		<p>住址：<input type="text"/></p>
+		<button>选择</button>
+		
+	</body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+//		$("<p>性别：<input type='text'/></p>").insertAfter("p:first");
+      $("#p1").after($("<p>性别：<input type='text' /></p>"));
+      $("p").remove("p:last");
+      $("p").append($("<span>该项是必填的</span>"));
+     $("span").css("color","red");
+	</script>
+</html>
